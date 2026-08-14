@@ -1,4 +1,4 @@
-# Mesh comparaison in hybrod photonic generative models
+# Mesh comparaison in hybrid photonic generative models
 
 Student research project by **Hugo**, **Niels** and **Tony**.
 
@@ -20,12 +20,12 @@ A full pedagogical explanation of the project (linear optics, Fock states, MMD l
 
 ## Installing the environment
 
-We run this project on Python 3.12.13, Perceval 1.2.4 and MerLin 0.4.0 (see `requirements.txt`). Make sure you have `python3.12.13` and `git` installed.
+We run this project on Python 3.12, Perceval 1.2.4 and MerLin 0.4.0 (see `requirements.txt`). Make sure you have `python3.12` and `git` installed.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/<user>/qlm-photonic.git
-cd qlm-photonic
+git clone https://github.com/HugoNcy/photonic-noise-robustness.git
+cd photonic-noise-robustness
 ```
 
 2. Create the virtual environment and install the libraries:
