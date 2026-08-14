@@ -1,0 +1,11 @@
+perceval-quandela==1.2.4
+merlinquantum==0.4.0
+torch==2.5.1
+
+# Scientific / plotting
+numpy
+matplotlib
+pandas
+
+# Notebooks
+jupyterlab
