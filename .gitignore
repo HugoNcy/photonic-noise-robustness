@@ -1,3 +1,7 @@
 # venv and git
 .git
 .venv
+
+# agents / skills to review the code, based on ECC
+.claude/settings.json
+CLAUDE.md
