@@ -14,7 +14,7 @@ This project does *not* aim to prove a quantum advantage. We are just comparing 
 
 A full pedagogical explanation of the project (linear optics, Fock states, MMD loss, ...) is in the `docs/` folder.
 
-***Disclaimer: AI was used in this project, mostly to review written code and give us insight and explanation about how some tools and concepts are working. But otherwise, everything was written by hand. You can find the agents and skills used in the `.claude/` folder (those are taken from the [ECC](https://github.com/affaan-m/ecc) repository). We also used a custom-built [MCP server](https://github.com/TonyPansera/merlin-perceval-mcp) on top of that.***
+> *Disclaimer: AI was used in this project, mostly to review written code and give us insight and explanation about how some tools and concepts are working. But otherwise, everything was written by hand. You can find the agents and skills used in the `.claude/` folder (those are taken from the [ECC](https://github.com/affaan-m/ecc) repository). We also used a custom-built [MCP server](https://github.com/TonyPansera/merlin-perceval-mcp) on top of that.*
 
 ## How to read this repository
 
@@ -47,4 +47,5 @@ python -m ipykernel install --user --name qlm-photonic --display-name "Python (q
 ```bash
 jupyter lab
 ```
+
 
