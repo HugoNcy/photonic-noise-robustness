@@ -24,7 +24,7 @@ Our goal is the following: given 6 random numbers sampled from a Gaussian distri
 We went with this architecture: a classical linear layer maps the 6 latent numbers to 6 angles. These angles are encoded into a photonic quantum layer built as a sandwich: a trainable entangling mesh, the layer of angle-encoding phase shifters from the 6 random numbers, and a second trainable entangling mesh. The circuit outputs a probability distribution over Fock states, which a classical adapter network (two linear layers with a ReLU in between) maps down to a single 2D point.
 
 Here is a schema of the model we created:
-*insert picture*
+![Phase 1 schema](img/phase1_schema.png)
 
 For now, we are using for the mesh simple MZI mapped using Clements decomposition. We will compare the MZI and the tritters in the next phases. We are also 6 modes with 3 photons, to create a Fock full space of domension 56.
 
