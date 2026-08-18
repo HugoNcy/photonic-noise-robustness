@@ -1,11 +1,11 @@
 ---
+title: 'Phase 1 validation: testing a basic model'
 jupyter:
   jupytext:
-    formats: ipynb,md
     text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
+      extension: .qmd
+      format_name: quarto
+      format_version: '1.0'
       jupytext_version: 1.19.5
   kernelspec:
     display_name: Python 3 (ipykernel)
@@ -13,7 +13,6 @@ jupyter:
     name: python3
 ---
 
-# Phase 1 validation: testing a basic model
 
 The goal of this notebook is to show that a classical-quantum model generative model can actually learn, using a simple model. For this, we would be using the torch library to create the classical part of our network, and add the quantum part through the functions and objects we created in `data.py` and `models.py`. You can find a more detailed explanation in the `docs`folder, including a schema of our model. Here, we will focus on explaining what we are doing instead of why.
 
@@ -24,7 +23,8 @@ import sys
 sys.path.append("../src")
 ```
 
-```python
+
+```{python}
 from torch.nn import ReLU, Tanh
 
 from data import * 
@@ -35,7 +35,6 @@ import numpy as np
 
 # We build the model
 model = nn.Sequential(
-    nn.Linear(1, 6), # This is just so it matches the input format.
     nn.Linear(6, 6),
     nn.Tanh(),
     QuantumCircuit(),
@@ -98,8 +97,21 @@ for i in range(256):
     y = model(x)
     outputs_test.append(y)
 
+print(outputs_test[:5])
 ```
 
 
+```{python}
+xs = [t[0, 0].item() for t in outputs_test]
+ys = [t[0, 1].item() for t in outputs_test]
+
+plt.figure(figsize=(6, 6))
+plt.scatter(xs, ys, alpha=0.6, s=15)
+plt.xlabel("Output dim 0")
+plt.ylabel("Output dim 1")
+plt.title("Model outputs for 256 random inputs")
+plt.grid(True, alpha=0.3)
+plt.show()
+```
 
 We can actually optimize the compute time by sending straight 256 times 6 random numbers into the 
