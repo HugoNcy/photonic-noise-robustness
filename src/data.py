@@ -19,4 +19,4 @@ def random_input_numbers(n: int, seed: int=0) -> torch.Tensor:
 
     g = torch.Generator().manual_seed(seed)
     # Centered reduced gaussian with std 1. Just random numbers.
-    return torch.randn(n, 1, generator=g)
+    return torch.randn(1, n, generator=g)
