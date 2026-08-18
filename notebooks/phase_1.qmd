@@ -114,4 +114,12 @@ plt.grid(True, alpha=0.3)
 plt.show()
 ```
 
+As we can see, this is what our untrained model outputs. It looks nothing like the two gaussians we want. Now let's train the model.
+
+
+
+
+
+
 We can actually optimize the compute time by sending straight 256 times 6 random numbers into the 
+
