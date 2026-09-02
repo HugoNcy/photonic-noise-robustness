@@ -1,6 +1,8 @@
 # venv and git
-.git
 .venv
+
+__pycache__/
+*.pyc
 
 # agents / skills to review the code, based on ECC
 .claude/settings.json
