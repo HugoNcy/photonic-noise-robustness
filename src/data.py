@@ -5,7 +5,7 @@ def two_gaussian(n: int, seed: int=0) -> torch.Tensor:
     """Function generating n points of a two-gaussian 2D distribution centered at (-1,0) and (1.0)"""
     # For reproductible results, this always generate the same "random" sequence numbers
     g = torch.Generator().manual_seed(seed)
-   
+
     # Create two tensors with n/2 points following a reduced centered gaussian, then shifted to get the two gaussians, with std 0.3.
     gaussA = torch.randn(n//2, 2, generator=g) * 0.3 + torch.tensor([-1.0, 0.0])
     gaussB = torch.randn(n-n//2, 2, generator=g) * 0.3 + torch.tensor([1.0, 0.0])
@@ -19,4 +19,4 @@ def random_input_numbers(n: int, seed: int=0) -> torch.Tensor:
 
     g = torch.Generator().manual_seed(seed)
     # Centered reduced gaussian with std 1. Just random numbers.
-    return torch.randn(n, 1, generator=g)
+    return torch.randn(n, 6, generator=g)

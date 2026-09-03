@@ -3,6 +3,7 @@
 
 __pycache__/
 *.pyc
+src/__pycache__/*
 
 # agents / skills to review the code, based on ECC
 .claude/settings.json
