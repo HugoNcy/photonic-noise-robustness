@@ -8,9 +8,9 @@ jupyter:
       format_version: '1.3'
       jupytext_version: 1.19.5
   kernelspec:
-    display_name: Python 3 (ipykernel)
+    display_name: Python (qlm-photonic)
     language: python
-    name: python3
+    name: qlm-photonic
 ---
 
 # Phase 1 validation: testing a basic model
